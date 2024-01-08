@@ -1,0 +1,51 @@
+class perso :
+    def __init__(self,nom,tele,adr,cin):
+        self.nom=nom
+        self.tele=tele
+        self.adr=adr
+        self.cin=cin
+n=int(input("donnez n :"))
+T= []
+for i in range (n) :
+    nom=input("donnez nom")
+    tele=input("donneztele ")
+    adr=input("donnez adr ")
+    cin=input("donnez cin")
+    T1=perso(nom,tele,adr,cin)
+    T.append(T1)
+print("menu")
+print("afichi")
+print("2 AJOUTI ")
+print(" 3 suprimi")
+print("5 save")
+x=input("donnez x :")
+while x>=1 and x<=5 :
+ 
+  if x==3 :
+    cin=input("donnez cin :")
+    for i in range n :
+         if cin=T[i].cin :
+         del T[i]
+         n=n-1
+         i=i-1
+             
+             print("deleted")
+  if x==2 :
+    nom=input("donnez nom")
+    tele=input("donneztele ")
+    adr=input("donnez adr ")
+    cin=input("donnez cin")
+    T2=perso(nom,tele,adr,cin)
+    
+  if x==5 :
+    f=open("data.txt" , "w")
+      for i in range n :
+          f.write("nom :" T[i].nom +"tele :" T[i].tele + "adr : " T[i].adr + "cin : " T[i].cin)
+            f.close()
+              print("its saved")
+
+ 
+   
+ 
+
+
